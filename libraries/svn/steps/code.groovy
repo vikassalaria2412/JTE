@@ -1,13 +1,13 @@
 // Fetch code from svn repository
 void call()
 {
-    stage('svn:code') {
-        agent {
+    print "hello"
+    agent {
             println "start agent"
             label 'jenkins-slave' // Replace with the label of your Jenkins slave
     }
-           
-                // Checkout code from SVN repository changes
+    stage('svn:code') {
+                 // Checkout code from SVN repository changes
         checkout([$class: 'SubversionSCM', 
         additionalCredentials: [], 
         excludedCommitMessages: '', 
@@ -17,12 +17,10 @@ void call()
         filterChangelog: false, 
         ignoreDirPropChanges: false, 
         includedRegions: '', 
-        println "start"
         locations: [[credentialsId: 'svn_credential_pipeline', 
                     depthOption: 'infinity', 
                     ignoreExternalsOption: true, 
                     remote: 'https://svn.riouxsvn.com/dmifactory']],
-        println "end"
         workspaceUpdater: [$class: 'UpdateUpdater']])
         script {
             def currentDir = sh(returnStdout: true,script: 'pwd').trim()
