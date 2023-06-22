@@ -22,6 +22,6 @@
 // define pipeline libraries common between applications
 
 libraries{
-    code
+    svn
     ant
 }
