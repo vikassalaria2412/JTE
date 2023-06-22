@@ -1,7 +1,7 @@
 // Fetch code from svn repository
 void call()
 {
-    stage('Svn:Code') {
+    stage('svn:code') {
             steps {
                 // Checkout code from SVN repository changes
                 checkout([$class: 'SubversionSCM', 

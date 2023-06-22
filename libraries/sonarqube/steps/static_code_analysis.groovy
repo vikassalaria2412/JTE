@@ -1,6 +1,6 @@
 void call()
 {
-    stage('SonarQube: Static Code Analysis') {
+    stage('SonarQube: static cde analysis') {
         steps {
                 script {
                     echo "SonarQube analysis"

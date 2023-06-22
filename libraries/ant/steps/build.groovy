@@ -1,7 +1,7 @@
 // write Jenkins Template Engine style groovy script here
 void call()
 {
-    stage("Ant: Build"){
+    stage("Ant: build"){
 
         steps {
                 script
