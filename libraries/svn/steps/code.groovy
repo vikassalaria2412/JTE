@@ -1,5 +1,9 @@
 // Fetch code from svn repository
+
+
 void call()
+{
+    node 
 {
     print "hello"
     agent {
@@ -29,4 +33,5 @@ void call()
 
 }
 
+}
 }
