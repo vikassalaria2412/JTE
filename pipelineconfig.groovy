@@ -20,9 +20,8 @@
 // }
 
 // define pipeline libraries common between applications
+
 libraries{
     code
-    build
-    // merge = true
-    // sonarqube // supplies the static_code_analysis step
+    ant
 }
