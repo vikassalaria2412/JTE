@@ -2,7 +2,7 @@
 void call()
 {
     stage('svn:code') {
-            steps {
+           
                 // Checkout code from SVN repository changes
                 checkout([$class: 'SubversionSCM', 
                 additionalCredentials: [], 
@@ -30,7 +30,7 @@ void call()
                 }
                 // Set the path to the build.xml file
                 
-            }
+            
 
         }
     
