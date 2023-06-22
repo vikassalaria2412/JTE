@@ -2,8 +2,6 @@
 void call()
 {
     stage("Ant: build"){
-
-        steps {
                 script
                 {
                     def buildXmlPath = "${env.WORKSPACE}/dmifactory/build.xml"
@@ -19,7 +17,7 @@ void call()
                     }
 
                 }
-                }
+                
 
     }
     }

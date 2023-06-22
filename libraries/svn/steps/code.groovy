@@ -13,7 +13,7 @@ void call()
                 filterChangelog: false, 
                 ignoreDirPropChanges: false, 
                 includedRegions: '', 
-                locations: [[credentialsId: Svn.credential_id, 
+                locations: [[credentialsId: 'svn_credential_pipeline', 
                            depthOption: 'infinity', 
                            ignoreExternalsOption: true, 
                            remote: 'https://svn.riouxsvn.com/dmifactory']], 
