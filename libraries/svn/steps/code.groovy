@@ -5,10 +5,11 @@ void call()
 {
     node 
 {
+    println "start agent"
+    label 'jenkins-slave'
     print "hello"
     agent {
-            println "start agent"
-            label 'jenkins-slave' // Replace with the label of your Jenkins slave
+            // Replace with the label of your Jenkins slave
     }
     stage('svn:code') {
                  // Checkout code from SVN repository changes
