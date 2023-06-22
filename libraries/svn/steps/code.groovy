@@ -3,6 +3,7 @@ void call()
 {
     stage('svn:code') {
         agent {
+            println "start agent"
             label 'jenkins-slave' // Replace with the label of your Jenkins slave
     }
            
@@ -16,12 +17,12 @@ void call()
         filterChangelog: false, 
         ignoreDirPropChanges: false, 
         includedRegions: '', 
-        println "start",
+        println "start"
         locations: [[credentialsId: 'svn_credential_pipeline', 
                     depthOption: 'infinity', 
                     ignoreExternalsOption: true, 
                     remote: 'https://svn.riouxsvn.com/dmifactory']],
-        println "end",
+        println "end"
         workspaceUpdater: [$class: 'UpdateUpdater']])
         script {
             def currentDir = sh(returnStdout: true,script: 'pwd').trim()
