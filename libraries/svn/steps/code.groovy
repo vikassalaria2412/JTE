@@ -16,12 +16,12 @@ void call()
         filterChangelog: false, 
         ignoreDirPropChanges: false, 
         includedRegions: '', 
-        print("start"),
+        println "start",
         locations: [[credentialsId: 'svn_credential_pipeline', 
                     depthOption: 'infinity', 
                     ignoreExternalsOption: true, 
                     remote: 'https://svn.riouxsvn.com/dmifactory']],
-        print("end"),
+        println "end",
         workspaceUpdater: [$class: 'UpdateUpdater']])
         script {
             def currentDir = sh(returnStdout: true,script: 'pwd').trim()
